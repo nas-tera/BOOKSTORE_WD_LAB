@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Register | G.L. Bajaj Online Book Store</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet">
+<link rel="icon" href="assets/logo.jpg">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body class="center-page">
+<a class="skip" href="#main">Skip to content</a>
+<header class="site-header">
+  <img class="logo" src="assets/logo.jpg" alt="G.L. Bajaj Greater Noida logo" width="72" height="72">
+  <div class="head-text">
+    <h1>G.L. Bajaj Online Book Store</h1>
+    <nav aria-label="Main navigation"><a href="home.html">Home</a><a href="login.html">Login</a><a href="registration.html" aria-current="page">Register</a><a href="catalogue.html">Catalogue</a><a href="cart.html">Cart <span id="cart-count" class="badge">0</span></a></nav>
+  </div>
+</header>
+<div class="layout">
+  <aside class="sidebar" aria-label="Book categories">
+    <h2>Categories</h2>
+    <a href="catalogue.html?cat=CSE" data-cat="CSE">CSE Books</a>
+    <a href="catalogue.html?cat=ECE" data-cat="ECE">ECE Books</a>
+    <a href="catalogue.html?cat=Mechanical" data-cat="Mechanical">Mechanical Books</a>
+    <a href="catalogue.html?cat=All" data-cat="All">All Books</a>
+    <a href="cart.html" class="cart-link">My Cart</a>
+  </aside>
+  <main id="main" class="content">
+    <section class="card form-card wide">
+      <h2>Registration Page</h2>
+      <form id="reg-form" novalidate>
+        <label for="name">Full name</label>
+        <input id="name" type="text" placeholder="Full Name" autocomplete="name"><span class="error" id="name-error"></span>
+        <label for="email">Email</label>
+        <input id="email" type="email" placeholder="Email" autocomplete="email"><span class="error" id="email-error"></span>
+        <label for="mobile">Mobile number</label>
+        <input id="mobile" type="tel" inputmode="numeric" maxlength="10" placeholder="Mobile No. (10 digits)" autocomplete="tel"><span class="error" id="mobile-error"></span>
+        <label for="reg-password">Password</label>
+        <input id="reg-password" type="password" placeholder="Password (min 6 characters)" autocomplete="new-password"><span class="error" id="reg-password-error"></span>
+        <label for="confirm">Confirm password</label>
+        <input id="confirm" type="password" placeholder="Confirm Password" autocomplete="new-password"><span class="error" id="confirm-error"></span>
+        <fieldset><legend>Gender</legend>
+          <label class="inline"><input type="radio" name="gender" value="Male"> Male</label>
+          <label class="inline"><input type="radio" name="gender" value="Female"> Female</label>
+          <label class="inline"><input type="radio" name="gender" value="Other"> Other</label>
+        </fieldset>
+        <fieldset><legend>Date of birth</legend>
+          <select id="dob-day" aria-label="Day"></select>
+          <select id="dob-month" aria-label="Month"></select>
+          <select id="dob-year" aria-label="Year"></select>
+          <span class="error" id="dob-error"></span>
+        </fieldset>
+        <fieldset><legend>Languages known</legend>
+          <label class="inline"><input type="checkbox" name="lang" value="English"> English</label>
+          <label class="inline"><input type="checkbox" name="lang" value="Hindi"> Hindi</label>
+          <label class="inline"><input type="checkbox" name="lang" value="Telugu"> Telugu</label>
+          <label class="inline"><input type="checkbox" name="lang" value="Tamil"> Tamil</label>
+        </fieldset>
+        <label for="address">Address</label>
+        <textarea id="address" rows="3" placeholder="Enter your address here"></textarea>
+        <button type="submit" class="btn full">Register</button>
+        <p id="reg-msg" class="msg" role="status" aria-live="polite"></p>
+      </form>
+    </section>
+  </main>
+</div>
+<footer class="site-footer">
+  <p>@Created by @Rishu</p>
+  <p>Roll no. 250192011303</p>
+  <p class="small">G.L. Bajaj Institute of Technology &amp; Management &middot; Web Designing Workshop (BCS353) &middot; Session 2026&ndash;27</p>
+</footer>
+<script src="script.js"></script>
+</body>
+</html>

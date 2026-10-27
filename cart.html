@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Cart | G.L. Bajaj Online Book Store</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet">
+<link rel="icon" href="assets/logo.jpg">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body class="">
+<a class="skip" href="#main">Skip to content</a>
+<header class="site-header">
+  <img class="logo" src="assets/logo.jpg" alt="G.L. Bajaj Greater Noida logo" width="72" height="72">
+  <div class="head-text">
+    <h1>G.L. Bajaj Online Book Store</h1>
+    <nav aria-label="Main navigation"><a href="home.html">Home</a><a href="login.html">Login</a><a href="registration.html">Register</a><a href="catalogue.html">Catalogue</a><a href="cart.html" aria-current="page">Cart <span id="cart-count" class="badge">0</span></a></nav>
+  </div>
+</header>
+<div class="layout">
+  <aside class="sidebar" aria-label="Book categories">
+    <h2>Categories</h2>
+    <a href="catalogue.html?cat=CSE" data-cat="CSE">CSE Books</a>
+    <a href="catalogue.html?cat=ECE" data-cat="ECE">ECE Books</a>
+    <a href="catalogue.html?cat=Mechanical" data-cat="Mechanical">Mechanical Books</a>
+    <a href="catalogue.html?cat=All" data-cat="All">All Books</a>
+    <a href="cart.html" class="cart-link">My Cart</a>
+  </aside>
+  <main id="main" class="content">
+    <section>
+      <h2 class="page-title">Your Shopping Cart</h2>
+      <div id="cart-empty" class="card empty" hidden>
+        <p>Your cart is empty.</p>
+        <a class="btn" href="catalogue.html">Browse books</a>
+      </div>
+      <div id="cart-full" hidden>
+        <div class="table-wrap">
+          <table class="book-table">
+            <thead><tr><th>Book Image</th><th>Book Name</th><th>Author</th><th>Price</th><th>Quantity</th><th>Subtotal</th><th>Action</th></tr></thead>
+            <tbody id="cart-body"></tbody>
+          </table>
+        </div>
+        <p class="total">Total Price: <strong id="cart-total">Rs. 0</strong></p>
+        <div class="center"><button id="checkout-btn" class="btn" type="button">Proceed to Checkout</button></div>
+      </div>
+      <p id="checkout-msg" class="msg center" role="status" aria-live="polite"></p>
+    </section>
+  </main>
+</div>
+<footer class="site-footer">
+  <p>@Created by @Rishu</p>
+  <p>Roll no. 250192011303</p>
+  <p class="small">G.L. Bajaj Institute of Technology &amp; Management &middot; Web Designing Workshop (BCS353) &middot; Session 2026&ndash;27</p>
+</footer>
+<script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,111 @@
+/* G.L. Bajaj Online Book Store - ocean blue & green theme */
+:root{
+  --deep:#073B4C; --primary:#087E8B; --teal:#0F9D9A; --green:#2EAD69;
+  --seafoam:#E8F7F2; --aqua:#F1FAFA; --white:#FFFFFF;
+  --text:#20343B; --muted:#607780; --border:#D5E6E8; --danger:#B3261E;
+  --radius:12px; --shadow:0 4px 14px rgba(7,59,76,.10);
+}
+*{box-sizing:border-box}
+body{margin:0;min-height:100vh;display:flex;flex-direction:column;font-family:'Inter',system-ui,-apple-system,'Segoe UI',sans-serif;font-size:1rem;line-height:1.6;color:var(--text);background:var(--aqua)}
+h1,h2{font-weight:600;line-height:1.25;margin:0 0 .75rem}
+h1{font-size:1.6rem} h2{font-size:1.4rem}
+a{color:var(--primary)}
+:focus-visible{outline:3px solid var(--teal);outline-offset:2px}
+.skip{position:absolute;left:-999px;top:0;background:var(--white);padding:.5rem 1rem;z-index:10}
+.skip:focus{left:0}
+
+/* Header: logo left, title + nav centred */
+.site-header{background:var(--deep);color:var(--white);display:grid;grid-template-columns:96px 1fr 96px;align-items:center;padding:.75rem 1rem;box-shadow:var(--shadow);position:relative;z-index:2}
+.logo{border-radius:12px;background:var(--white);object-fit:contain;padding:2px;box-shadow:0 2px 8px rgba(0,0,0,.25)}
+.head-text{text-align:center}
+.head-text h1{color:var(--white);margin-bottom:.5rem}
+nav{display:flex;flex-wrap:wrap;justify-content:center;gap:.25rem}
+nav a{color:var(--white);text-decoration:none;font-weight:500;padding:.35rem .9rem;border-radius:999px;transition:background .2s}
+nav a:hover{background:rgba(255,255,255,.14)}
+nav a[aria-current="page"]{background:var(--teal)}
+.badge{display:inline-block;min-width:1.3rem;padding:0 .35rem;margin-left:.2rem;border-radius:999px;background:var(--green);color:var(--white);font-size:.75rem;font-weight:700;text-align:center}
+
+/* Sidebar + main */
+.layout{flex:1;display:grid;grid-template-columns:240px 1fr}
+.sidebar{background:var(--seafoam);border-right:1px solid var(--border);padding:1.25rem 1rem;display:flex;flex-direction:column;gap:.6rem}
+.sidebar h2{text-align:center;color:var(--deep);font-size:1.1rem}
+.sidebar a{display:block;padding:.65rem .9rem;background:var(--white);color:var(--deep);font-weight:500;text-decoration:none;border-radius:8px;border-left:4px solid var(--teal);box-shadow:0 1px 3px rgba(7,59,76,.08);transition:transform .2s,background .2s}
+.sidebar a:hover{background:var(--teal);color:var(--white);transform:translateX(3px)}
+.sidebar a.active{background:var(--primary);color:var(--white)}
+.sidebar .cart-link{border-left-color:var(--green)}
+.content{padding:2rem;min-width:0}
+.center-page .content{display:flex;justify-content:center;align-items:flex-start}
+.welcome{max-width:640px;margin:3rem auto}
+.welcome h2{font-size:1.8rem;color:var(--deep)}
+.page-title{text-align:center;color:var(--deep)}
+
+/* Buttons */
+.btn{display:inline-block;border:0;cursor:pointer;font:inherit;font-weight:600;color:var(--white);background:var(--green);padding:.6rem 1.3rem;border-radius:8px;text-decoration:none;box-shadow:0 2px 6px rgba(46,173,105,.3);transition:background .2s,transform .2s}
+.btn:hover{background:#25965a;transform:translateY(-1px)}
+.btn-ghost{background:var(--white);color:var(--deep);border:1px solid var(--border);box-shadow:none}
+.btn-ghost:hover{background:var(--seafoam)}
+.btn.full{width:100%;margin-top:1rem}
+.btn-sm{padding:.35rem .8rem;font-size:.85rem}
+.btn-danger{background:var(--danger);box-shadow:none}.btn-danger:hover{background:#8f1e18}
+.btn-row{display:flex;gap:.75rem;margin-top:1rem}.btn-row .btn{flex:1}
+
+/* Forms */
+.card{background:var(--white);border:1px solid var(--border);border-radius:16px;box-shadow:var(--shadow);padding:1.75rem}
+.form-card{width:100%;max-width:400px}.form-card.wide{max-width:520px}
+.form-card h2{text-align:center;color:var(--deep)}
+label{display:block;margin-top:.8rem;font-weight:500;font-size:.9rem}
+label.inline{display:inline-block;margin:.2rem .8rem .2rem 0;font-weight:400}
+input[type=text],input[type=email],input[type=tel],input[type=password],textarea,select{width:100%;font:inherit;padding:.6rem .75rem;margin-top:.3rem;border:1px solid var(--border);border-radius:8px;background:var(--white);color:var(--text)}
+select{width:auto;min-width:5.5rem;margin-right:.4rem}
+input.invalid,textarea.invalid{border-color:var(--danger)}
+fieldset{border:1px solid var(--border);border-radius:8px;margin:1rem 0 0;padding:.5rem .9rem .7rem}
+legend{font-weight:500;font-size:.9rem;padding:0 .3rem}
+.error{display:block;color:var(--danger);font-size:.82rem;min-height:1rem}
+.notice{background:var(--seafoam);border-radius:8px;padding:.5rem .75rem;font-size:.85rem;color:var(--deep)}
+.msg{margin:1rem 0 0;font-weight:500}.msg.ok{color:#1d7a47}.msg.bad{color:var(--danger)}
+.alt{text-align:center;font-size:.9rem}
+
+/* Catalogue & cart tables */
+.filters{display:flex;flex-wrap:wrap;justify-content:center;gap:.5rem;margin-bottom:.5rem}
+.chip{font:inherit;font-weight:500;padding:.4rem 1rem;border:1px solid var(--border);border-radius:999px;background:var(--white);color:var(--deep);cursor:pointer;transition:background .2s}
+.chip:hover{background:var(--seafoam)}
+.chip[aria-pressed="true"]{background:var(--primary);border-color:var(--primary);color:var(--white)}
+.muted{color:var(--muted);text-align:center;font-size:.9rem}
+.table-wrap{background:var(--white);border-radius:var(--radius);box-shadow:var(--shadow);overflow-x:auto}
+.book-table{width:100%;border-collapse:collapse;text-align:left}
+.book-table th{background:var(--primary);color:var(--white);font-weight:600;padding:.8rem;white-space:nowrap}
+.book-table td{padding:.7rem .8rem;border-bottom:1px solid var(--border);vertical-align:middle}
+.book-table tbody tr:nth-child(even){background:var(--aqua)}
+.book-table tbody tr:hover{background:var(--seafoam)}
+.book-table img{width:56px;height:76px;object-fit:contain;background:var(--white);border-radius:4px;box-shadow:var(--shadow);display:block}
+.tag{background:var(--seafoam);color:var(--deep);font-size:.8rem;font-weight:600;padding:.15rem .6rem;border-radius:999px}
+.qty{display:inline-flex;align-items:center;gap:.4rem}
+.qty button{width:1.9rem;height:1.9rem;border:0;border-radius:6px;background:var(--teal);color:var(--white);font:inherit;font-weight:700;cursor:pointer}
+.qty button:hover{background:var(--primary)}
+.total{text-align:right;font-size:1.1rem;margin:1rem 0}
+.center{text-align:center}
+.empty{text-align:center;max-width:420px;margin:2rem auto}
+.toast{position:fixed;bottom:5rem;left:50%;transform:translateX(-50%);background:var(--deep);color:var(--white);padding:.6rem 1.2rem;border-radius:8px;box-shadow:var(--shadow);opacity:0;pointer-events:none;transition:opacity .25s}
+.toast.show{opacity:1}
+
+/* Footer */
+.site-footer{background:var(--deep);color:var(--white);text-align:center;padding:.9rem 1rem;font-weight:600;line-height:1.4}
+.site-footer p{margin:0}.site-footer .small{font-weight:400;font-size:.8rem;opacity:.8;margin-top:.3rem}
+
+/* Responsive */
+@media (max-width:820px){
+  .site-header{grid-template-columns:64px 1fr}
+  .logo{width:56px;height:56px}.head-text h1{font-size:1.25rem}
+  .layout{grid-template-columns:1fr}
+  .sidebar{flex-direction:row;flex-wrap:wrap;border-right:0;border-bottom:1px solid var(--border);padding:.75rem}
+  .sidebar h2{width:100%;margin:0}
+  .sidebar a{flex:1 1 auto;text-align:center}
+  .content{padding:1rem}
+  /* tables become stacked cards */
+  .book-table thead{display:none}
+  .book-table tr{display:block;padding:.6rem;border-bottom:4px solid var(--seafoam)}
+  .book-table td{display:flex;justify-content:space-between;align-items:center;gap:1rem;border:0;padding:.3rem .4rem}
+  .book-table td::before{content:attr(data-label);font-weight:600;color:var(--muted);font-size:.85rem}
+}
+@media (prefers-reduced-motion:reduce){*{transition:none!important}}
+.book-table td[data-label="Price"],.book-table td[data-label="Subtotal"],.book-table .btn{white-space:nowrap}
